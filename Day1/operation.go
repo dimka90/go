@@ -7,14 +7,14 @@ func main(){
 // Declare a vairable 
 // var name = "Dimka"
 
-var nums [5]int
+nums := make([]int,3)
 nums[0] =4
 //fmt.Println(names)
 printArray(nums)
 }
 
-func printArray(nums [5]int){
-for i :=0; i<len(nums); i++{
+func printArray(nums []int){
+for i :=0; i<cap(nums); i++{
 fmt.Print(nums[i], "==>"  + " ")
 }
 }
