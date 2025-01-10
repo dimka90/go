@@ -4,17 +4,16 @@ package main
 import "fmt"
 
 func main(){
-// Declare a vairable 
-// var name = "Dimka"
-
+// Declare a slice
 nums := make([]int,3)
 nums[0] =4
-//fmt.Println(names)
+
+nums = append(nums, 20)
 printArray(nums)
 }
 
 func printArray(nums []int){
-for i :=0; i<cap(nums); i++{
+for i :=0; i<len(nums); i++{
 fmt.Print(nums[i], "==>"  + " ")
 }
 }
